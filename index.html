@@ -1,84 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <p class="eyebrow">Task 1</p>
-      <h1>Image Gallery</h1>
-      <p class="subtitle">Browse a polished collection of scenic shots with filters, hover effects, and a lightbox preview.</p>
-    </header>
 
-    <div class="filters" role="toolbar" aria-label="Filter gallery">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="nature">Nature</button>
-      <button class="filter-btn" data-filter="city">City</button>
-      <button class="filter-btn" data-filter="animal">Animals</button>
-    </div>
+<div class="calculator">
 
-    <section class="gallery" aria-label="Photo gallery">
-      <article class="gallery-item" data-category="nature" data-index="0">
-        <img src="images/imagesnature1.jpg.jpeg" alt="Mountain lake in the morning">
-        <div class="overlay">
-          <span>Nature</span>
-          <h2>Mountain Escape</h2>
-        </div>
-      </article>
+<input type="text" id="display" readonly>
 
-      <article class="gallery-item" data-category="nature" data-index="1">
-        <img src="images/imagesnature2.jpg.jpeg" alt="Forest trail covered in greenery">
-        <div class="overlay">
-          <span>Nature</span>
-          <h2>Forest Trail</h2>
-        </div>
-      </article>
+<div class="buttons">
 
-      <article class="gallery-item" data-category="city" data-index="2">
-        <img src="images/imagescity1.jpg.jpeg" alt="Modern city skyline at dusk">
-        <div class="overlay">
-          <span>City</span>
-          <h2>Urban Glow</h2>
-        </div>
-      </article>
+<button onclick="clearDisplay()">C</button>
+<button onclick="deleteLast()">⌫</button>
+<button onclick="append('%')">%</button>
+<button onclick="append('/')">÷</button>
 
-      <article class="gallery-item" data-category="city" data-index="3">
-        <img src="images/imagescity2.jpg.jpeg" alt="Busy downtown street with tall buildings">
-        <div class="overlay">
-          <span>City</span>
-          <h2>Downtown Rush</h2>
-        </div>
-      </article>
+<button onclick="append('7')">7</button>
+<button onclick="append('8')">8</button>
+<button onclick="append('9')">9</button>
+<button onclick="append('*')">×</button>
 
-      <article class="gallery-item" data-category="animal" data-index="4">
-        <img src="images/imagesanimal1.jpg.jpeg" alt="Curious fox in the wild">
-        <div class="overlay">
-          <span>Animal</span>
-          <h2>Wild Spirit</h2>
-        </div>
-      </article>
+<button onclick="append('4')">4</button>
+<button onclick="append('5')">5</button>
+<button onclick="append('6')">6</button>
+<button onclick="append('-')">−</button>
 
-      <article class="gallery-item" data-category="animal" data-index="5">
-        <img src="images/imagesanimal2.jpg.jpeg" alt="A calm deer in a meadow">
-        <div class="overlay">
-          <span>Animal</span>
-          <h2>Meadow Visitor</h2>
-        </div>
-      </article>
-    </section>
+<button onclick="append('1')">1</button>
+<button onclick="append('2')">2</button>
+<button onclick="append('3')">3</button>
+<button onclick="append('+')">+</button>
 
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <button class="lightbox-close" aria-label="Close preview">&times;</button>
-      <button class="lightbox-nav prev" aria-label="Previous image">&#10094;</button>
-      <img id="lightbox-img" src="" alt="Selected gallery image">
-      <button class="lightbox-nav next" aria-label="Next image">&#10095;</button>
-    </div>
-  </main>
+<button onclick="append('0')">0</button>
+<button onclick="append('.')">.</button>
+<button class="equal" onclick="calculate()">=</button>
 
-  <script src="script.js"></script>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
